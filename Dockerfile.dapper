@@ -1,0 +1,7 @@
+FROM alpine
+
+RUN apk --update add bash
+ENV DAPPER_SOURCE /source
+ENV DAPPER_OUTPUT bin
+WORKDIR ${DAPPER_SOURCE}
+ENTRYPOINT ["./build.sh"]
